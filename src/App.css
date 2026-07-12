@@ -1,0 +1,45 @@
+.App-header .navlist {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: .975rem;
+  text-transform: uppercase;
+}
+
+/* 親メニューリンク */
+.App-header .navlist_parenet {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+}
+
+/* サブメニュー（初期状態で非表示） */
+.App-header .navlist_sub {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%; /* 親メニューの直下に表示 */
+  left: 0;
+  background-color: #444;
+  display: none;
+  width: 100%;
+}
+
+/* サブメニューアイテム */
+.App-header .navlist_sub li a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* サブメニューを親メニューにホバーしたときに表示する */
+.App-header .navlist_parenet:hover .navlist_sub {
+  display: block;
+}
